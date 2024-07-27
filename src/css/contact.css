@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Section Styles */
+section.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.headquarters, .contact-form {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.headquarters {
+    background-color: #e3f2fd;
+}
+
+.headquarters h2, .contact-form h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.headquarters .headquarters-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.headquarters .office, .headquarters .inquiries {
+    margin-bottom: 20px;
+}
+
+.office h3, .inquiries h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.office p, .inquiries p {
+    font-size: 16px;
+    color: #666;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px; /* Increase the height */
+    resize: none; /* Make the textarea non-adjustable */
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0084ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section.container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headquarters, .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .headquarters .headquarters-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form input, .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
